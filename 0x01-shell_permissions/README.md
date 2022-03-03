@@ -22,13 +22,13 @@ Exercise 10: chmod --reference=olleh hello Copies the mode of file olleh to file
 
 Exercise 11: chmod -R +X . Add execute permission to all subdirectories of the current directory for the everyone. Regular files should not be changed.
 
-Exercise 12: mkdir -m 751 dir_holberton Create a directory called dir_holberton with permissions 751 in the working directory. User has all read, write, and execute permissions. Group has read and execute permissions. Others have just execute permission.
+Exercise 12: mkdir -m 751 mkdir my_school Create a directory called my_dir with permissions 751 in the working directory. User has all read, write, and execute permissions. Group has read and execute permissions. Others have just execute permission.
 
-Exercise 13: chgrp holberton hello Change gorup owner to holberton for the file hello
+Exercise 13: chgrp school hello Change gorup owner to school for the file hello
 
-Exercise 14: chown betty:holberton * Change owner to betty and the group owner to holberton for all files and directories in current directory.
+Exercise 14: chown vincent:staff * Change owner to vincent and the group owner to staff for all files and directories in current directory.
 
-Exercise 15: chown -h betty:holberton _hello Changes the owner and group owner of file _hello to betty and holberton respectively.
+Exercise 15: chown -h vincent:staff _hello Changes the owner and group owner of file _hello to vincent and staff respectively.
 
 Exercise 16: chown --from=guillaume betty hello Change owner of the file hello to betty only if it is currently owned by guillaume
 
