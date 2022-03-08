@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $MANPATH/action
+echo $PATH\/action
