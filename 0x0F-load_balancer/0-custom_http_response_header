@@ -9,4 +9,4 @@ echo "Ceci n'est pas une page" >> /var/www/html/error_404.html
 sudo sed -i '24i\	rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-enabled/default
 sudo sed -i '25i\	error_page 404 /error_404.html;' /etc/nginx/sites-enabled/default
 sudo sed -i "11i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
-service nginx start
+sudo service nginx start
