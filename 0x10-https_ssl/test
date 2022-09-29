@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+ for subd in www lb-01 web-01 web-02
+    do
+	log = dig "$subd.$1" | awk -v subd="$subd"
