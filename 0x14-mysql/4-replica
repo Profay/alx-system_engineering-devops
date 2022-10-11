@@ -8,3 +8,13 @@ sudo service mysql restart
 #open new terminal
 #ssh into server1
 sudo mysqldump -u root tyrell_corp > tyrell_corp.sql
+
+
+
+
+CHANGE MASTER TO
+MASTER_HOST='3.91.63.125',
+MASTER_USER='replica_user',
+MASTER_PASSWORD='replica_user',
+MASTER_LOG_FILE='mysql-bin.000001',
+MASTER_LOG_POS=306;
