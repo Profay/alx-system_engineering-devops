@@ -1,0 +1,8 @@
+sudo mysql
+CREATE DATABASE IF NOT EXISTS tyrell_corp;
+GRANT SELECT ON TABLE hbtn_0d_2.* TO 'holberton_user'@'localhost';
+
+CREATE TABLE IF NOT EXISTS nexus6 (
+    id INT,
+    name VARCHAR(256) NOT NULL
+);
