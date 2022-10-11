@@ -1,0 +1,10 @@
+#server 1
+
+sudo ufw allow from 3.239.2.120 to any port 3306
+sudo sed -i "s/bind-address/#bind-address/g" /etc/mysql/mysql.conf.d/mysqld.conf
+sudo sed -i "38i. server-id \t = 1\nlog_bin \t = \/var/log/mysql/mysql-bin.log\n\binlog_do_db \t = tyrell_corp\n" > /etc/mysql/mysql.conf.d/mysqld.conf
+sudo service mysql restart
+
+#open new terminal
+#ssh into server1
+sudo mysqldump -u root tyrell_corp > tyrell_corp.sql
