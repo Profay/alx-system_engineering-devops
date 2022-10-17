@@ -19,7 +19,7 @@ def get_user_todo_list():
     complete = []
     for todo in todo_list:
         task = {}
-        task['tasks'] = todo.get('title')
+        task['task'] = todo.get('title')
         task['completed'] = todo.get('completed')
         task['username'] = user.get('username')
         complete.append(task)
