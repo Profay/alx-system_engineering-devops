@@ -16,12 +16,13 @@ def get_user_todo_list():
     todo_list = requests.get(url2).json()
     user = requests.get(url1).json()
     path = "{}.csv".format(employee_id)
-    
+
     with open(path, 'w', encoding='utf-8') as f:
         writer = csv.writer(f, delimiter=',', quoting=csv.QUOTE_ALL)
         for todo in todo_list:
             writer.writerow([employee_id, user.get('username'),
                             todo.get('completed'), todo.get('title')])
+
 
 if __name__ == '__main__':
     get_user_todo_list()
