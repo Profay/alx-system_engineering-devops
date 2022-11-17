@@ -1,0 +1,8 @@
+[Unit]
+Description=Some service description
+
+[Service]
+ExecStart=/bin/bash -c "~/gunicorn.sh -f argument & disown"
+
+[Install]
+WantedBy=multi-user.target
